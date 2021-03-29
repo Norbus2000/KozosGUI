@@ -36,9 +36,9 @@ public class KozosGUI extends javax.swing.JFrame {
         Valasz = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         Kilepes = new javax.swing.JMenu();
-        jMenuItem10 = new javax.swing.JMenuItem();
+        menuKilepes = new javax.swing.JMenuItem();
         Muveletek = new javax.swing.JMenu();
-        Osszead = new javax.swing.JMenuItem();
+        muveletOsszead = new javax.swing.JMenuItem();
         Kivonas = new javax.swing.JMenuItem();
         Szorzas = new javax.swing.JMenuItem();
         Osztas = new javax.swing.JMenuItem();
@@ -98,20 +98,25 @@ public class KozosGUI extends javax.swing.JFrame {
 
         Kilepes.setText("Menü");
 
-        jMenuItem10.setText("Kilépés");
-        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
+        menuKilepes.setText("Kilépés");
+        menuKilepes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem10ActionPerformed(evt);
+                menuKilepesActionPerformed(evt);
             }
         });
-        Kilepes.add(jMenuItem10);
+        Kilepes.add(menuKilepes);
 
         jMenuBar1.add(Kilepes);
 
         Muveletek.setText("Műveletek");
 
-        Osszead.setText("Összeadás");
-        Muveletek.add(Osszead);
+        muveletOsszead.setText("Összeadás");
+        muveletOsszead.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                muveletOsszeadActionPerformed(evt);
+            }
+        });
+        Muveletek.add(muveletOsszead);
 
         Kivonas.setText("Kivonás");
         Kivonas.addActionListener(new java.awt.event.ActionListener() {
@@ -149,13 +154,19 @@ public class KozosGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_KivonasActionPerformed
 
-    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
+    private void menuKilepesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuKilepesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem10ActionPerformed
+    }//GEN-LAST:event_menuKilepesActionPerformed
 
     private void ValaszActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ValaszActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ValaszActionPerformed
+
+    private void muveletOsszeadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_muveletOsszeadActionPerformed
+        int elsoSzam = 1 + (int) (Math.random() * 50);
+        int masodikSzam = 1 + (int) (Math.random() * 50);
+        
+    }//GEN-LAST:event_muveletOsszeadActionPerformed
 
     /**
      * @param args the command line arguments
@@ -197,16 +208,16 @@ public class KozosGUI extends javax.swing.JFrame {
     private javax.swing.JMenu Kilepes;
     private javax.swing.JMenuItem Kivonas;
     private javax.swing.JMenu Muveletek;
-    private javax.swing.JMenuItem Osszead;
     private javax.swing.JMenuItem Osztas;
     private javax.swing.JLabel Szamolos;
     private javax.swing.JMenuItem Szorzas;
     private javax.swing.JButton Ujfeladat;
     private javax.swing.JTextField Valasz;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JMenuItem menuKilepes;
+    private javax.swing.JMenuItem muveletOsszead;
     // End of variables declaration//GEN-END:variables
 }
